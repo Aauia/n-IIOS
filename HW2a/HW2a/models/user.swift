@@ -1,8 +1,13 @@
-//
-//  user.swift
-//  HW2a
-//
-//  Created by Aiaulym Abduohapova on 09.06.2025.
-//
 
-import Foundation
+
+import SwiftUI
+struct User: Codable, Identifiable, Equatable {
+    var id = UUID()
+    var firstName: String
+    var lastName: String
+    var nickname: String
+    var password: String
+    
+    var lastHomework: String = "No homework yet"
+    var todoList: [String] = []
+}

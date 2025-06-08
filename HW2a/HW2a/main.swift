@@ -1,8 +1,11 @@
-//
-//  main.swift
-//  HW2a
-//
-//  Created by Aiaulym Abduohapova on 09.06.2025.
-//
+import SwiftUI
 
-import Foundation
+struct UserSessionMVVMApp: App {
+    @StateObject private var userManager = Manager()
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView(userManager: userManager)
+        }
+    }
+}
